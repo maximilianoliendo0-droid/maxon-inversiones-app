@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101b22">
+<title>MAXON INVERSIONES</title>
+<style>
+:root{--bg:#0b1218;--panel:#121e27;--panel2:#172630;--line:#293b46;--text:#eef5f7;--muted:#9eb0ba;--green:#57d6a0;--yellow:#f5c85b;--red:#ff7777;--blue:#7cb9ff}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#101c24,#0b1218 280px);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:1px solid var(--line);background:#20323d;color:var(--text);border-radius:12px;padding:10px 13px;font-weight:650}button.primary{background:var(--green);color:#092016;border-color:var(--green)}button.warn{border-color:#7d5555}button.small{padding:6px 9px;font-size:12px}input,select{width:100%;background:#0c171e;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px;min-width:0}label{display:block;color:var(--muted);font-size:12px;margin:0 0 5px}.wrap{max-width:1120px;margin:auto;padding:18px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}.brand{display:flex;gap:11px;align-items:center}.logo{width:44px;height:44px;border-radius:14px;background:var(--green);color:#092016;display:grid;place-items:center;font-weight:900;font-size:21px}.sub{color:var(--muted);font-size:13px}.pill{border:1px solid #345246;color:var(--green);border-radius:999px;padding:6px 10px;font-size:12px}.hero{padding:20px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(120deg,#172a32,#132029);margin-bottom:16px}.hero h1{font-size:clamp(24px,4vw,36px);line-height:1.1;margin:8px 0}.hero p{color:var(--muted);max-width:680px;margin:8px 0 16px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:14px 0}.stat,.card{border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:15px;min-width:0}.stat .num{font-size:23px;font-weight:800;margin-top:5px;overflow-wrap:anywhere}.muted{color:var(--muted)}.green{color:var(--green)}.yellow{color:var(--yellow)}.red{color:var(--red)}.tabs{display:flex;gap:8px;overflow:auto;margin:16px 0}.tabs button{white-space:nowrap}.tabs button.active{background:var(--green);color:#092016;border-color:var(--green)}.grid{display:grid;grid-template-columns:1.25fr .75fr;gap:14px}.card h2{font-size:18px;margin:0 0 13px}.card h3{font-size:15px;margin:0 0 9px}.section{display:none}.section.active{display:block}.row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.formgrid .full{grid-column:1/-1}.field{min-width:0}.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);white-space:nowrap}th{color:var(--muted);font-weight:600}.empty{padding:20px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:12px}.tag{display:inline-block;padding:4px 8px;border-radius:999px;background:#20323d;color:#d5e4eb;font-size:11px}.notice{border-left:3px solid var(--yellow);padding:10px 12px;background:#28261d;border-radius:8px;color:#f4e8c5;font-size:13px}.alertitem{padding:12px;border-bottom:1px solid var(--line);border-radius:10px;margin:6px 0}.alertitem:last-child{border-bottom:0}.alertitem.alert-target{background:rgba(49,190,119,.16);border:1px solid #36b875;box-shadow:inset 4px 0 0 #36b875}.alertitem.alert-risk{background:rgba(255,75,75,.16);border:1px solid #ff5555;box-shadow:inset 4px 0 0 #ff5555}.alert-target .tag{background:#1e754b;color:#e7fff1;border:1px solid #36b875}.alert-risk .tag{background:#842c35;color:#fff0f0;border:1px solid #ff5555}.footer{color:var(--muted);font-size:12px;padding:20px 0}.hide{display:none!important}.split{display:grid;grid-template-columns:1fr 1fr;gap:14px}.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.price{font-weight:750}.tiny{font-size:12px;color:var(--muted)}canvas{width:100%;height:170px;display:block;background:#0c171e;border:1px solid var(--line);border-radius:12px}.toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:#e9fff5;color:#082016;padding:11px 16px;border-radius:12px;box-shadow:0 8px 30px #0008;z-index:10;max-width:90vw}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.grid,.split{grid-template-columns:1fr}.wrap{padding:13px}.stat .num{font-size:20px}.hero{padding:16px}.formgrid{grid-template-columns:1fr}.formgrid .full{grid-column:auto}}
+
+/* MAXI INVERSOR · Premium trading terminal skin */
+:root{--bg:#080b16;--panel:#111629;--panel2:#191f36;--line:#2a3150;--text:#f4f6ff;--muted:#9da8c4;--green:#35e39a;--yellow:#ffc857;--red:#ff536b;--blue:#67d5ff}
+body{background:radial-gradient(ellipse at 90% -5%,rgba(93,79,190,.23),transparent 38%),radial-gradient(ellipse at 0% 28%,rgba(31,145,180,.13),transparent 34%),#080b16;letter-spacing:.01em}
+.wrap{max-width:1280px;padding:22px}
+.top{padding:10px 2px 20px;border-bottom:1px solid rgba(135,164,181,.15);margin-bottom:22px}
+.brand{gap:13px}.brand strong{letter-spacing:.14em;font-size:14px}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#43f0a5,#14a875);box-shadow:0 0 28px #28d58b25;font-size:22px;position:relative}.logo span{font-size:12px;position:absolute;right:7px;top:5px}
+.sub{letter-spacing:.08em;font-size:10px}.pill{background:#13251f;border-color:#235941;color:#71f3b7;font-weight:700;letter-spacing:.08em}
+.hero{position:relative;overflow:hidden;padding:28px;border-radius:24px;border-color:#263f45;background:linear-gradient(115deg,rgba(30,31,65,.98),rgba(15,26,46,.98) 55%,rgba(13,31,45,.98));box-shadow:0 18px 55px #0003}
+.hero:after{content:'↗';position:absolute;right:28px;top:4px;font-size:150px;line-height:1;font-weight:900;color:#42e9a4;opacity:.055;pointer-events:none}
+.hero h1{font-size:clamp(29px,5vw,43px);letter-spacing:-.045em;margin:13px 0}.hero p{font-size:14px;line-height:1.7;max-width:720px}.hero .sub{color:#9cbdff;font-weight:800;letter-spacing:.16em}
+button{transition:transform .16s ease,border-color .16s ease,filter .16s ease;background:linear-gradient(180deg,#1c2b36,#17232d);border-color:#2b3e4b;border-radius:11px}button:hover{border-color:#75baff;filter:brightness(1.08)}button:active{transform:scale(.98)}button.primary{background:linear-gradient(135deg,#86a7ff,#52d5ef);box-shadow:0 5px 20px #628cff26;color:#07111e}
+.tabs{padding:5px;background:#0e161e;border:1px solid #1d2b36;border-radius:15px;gap:5px}.tabs button{background:transparent;border-color:transparent;color:#9aadb8;border-radius:10px;padding:10px 14px}.tabs button.active{background:linear-gradient(135deg,#87a4ff,#54d3ed);color:#07111e;box-shadow:0 4px 15px #638cff26}
+.stats{gap:12px;margin:18px 0}.stat,.card{background:linear-gradient(155deg,rgba(18,29,39,.98),rgba(13,22,30,.98));border-color:#243541;border-radius:18px;box-shadow:0 8px 24px #00000012}.stat{position:relative;overflow:hidden;padding:18px}.stat:after{content:'';position:absolute;inset:0 auto 0 0;width:2px;background:linear-gradient(180deg,#35e39a,#35e39a00);opacity:.65}.stat .num{font-size:clamp(20px,2.4vw,27px);letter-spacing:-.035em}.stat .muted{font-size:12px;letter-spacing:.035em}.card{padding:19px}.card h2{font-size:16px;letter-spacing:-.01em}.card h2:before{content:'';display:inline-block;width:5px;height:14px;border-radius:4px;background:#35e39a;margin-right:9px;vertical-align:-2px}
+input,select{background:#0a1219;border-color:#2a3a46;border-radius:11px;padding:12px}input:focus,select:focus{outline:2px solid #6c9cff45;border-color:#6c9cff}label{font-size:11px;letter-spacing:.035em;text-transform:uppercase}
+.tag{background:#1a2b36;border:1px solid #2c414e;color:#c5d5de;font-weight:700;letter-spacing:.025em}.alertitem{background:#0c151c;border:1px solid #1e2c36;padding:14px}.alertitem.alert-target{background:linear-gradient(100deg,#0e3327,#10251f);border-color:#22b879;box-shadow:inset 4px 0 0 #35e39a,0 0 24px #35e39a0a}.alertitem.alert-risk{background:linear-gradient(100deg,#391820,#21151b);border-color:#ff596b;box-shadow:inset 4px 0 0 #ff596b,0 0 24px #ff596b0a}
+.alert-target .tag{background:#174b37;color:#8dffca;border-color:#258b61}.alert-risk .tag{background:#5b202c;color:#ffc1c7;border-color:#a8374b}
+th{font-size:10px;text-transform:uppercase;letter-spacing:.07em}td{padding:13px 8px}tbody tr:hover{background:#182630}.notice{background:#28261c;border-radius:12px}.empty{background:#0b141b;border-color:#2a3b47}.footer{border-top:1px solid #1d2b36;margin-top:18px;line-height:1.8}
+.live-dot{display:inline-block;width:7px;height:7px;background:#35e39a;border-radius:50%;margin-left:7px;box-shadow:0 0 10px #35e39a;vertical-align:middle}
+@media(max-width:760px){.wrap{padding:12px}.top{padding:5px 2px 15px}.hero{padding:20px;border-radius:19px}.hero:after{right:8px;top:12px;font-size:95px}.stats{gap:9px}.stat,.card{padding:14px}.tabs{position:sticky;top:5px;z-index:5;backdrop-filter:blur(16px);background:#0d161eeF}.tabs button{padding:10px 12px;font-size:12px}.brand strong{font-size:13px}.pill{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Trading chart module */
+.market-card{background:linear-gradient(145deg,#0f1922,#0b1219);border-color:#2b3e49}.market-kicker{color:#64e9ae;letter-spacing:.15em;font-weight:800}.market-controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.market-controls .active-range{background:#1b4838;color:#7bffc0;border-color:#2dc889}.chart-summary{display:flex;gap:clamp(18px,5vw,64px);flex-wrap:wrap;padding:17px 0 12px}.chart-summary>div{display:flex;flex-direction:column;gap:4px}.chart-summary strong{font-size:17px;letter-spacing:-.02em}.candle-wrap{height:260px;position:relative}.candle-wrap canvas{height:260px;background:linear-gradient(180deg,#0a141b,#0b1218);border:1px solid #1d303b;border-radius:14px}.chart-legend{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-top:12px;font-size:11px;color:#a1b3bd}.chart-legend span{display:inline-flex;align-items:center;gap:6px}.chart-legend i{display:inline-block;width:8px;height:8px;border-radius:2px}.legend-up{background:#35e39a}.legend-down{background:#ff596b}
+@media(max-width:600px){.market-head{align-items:flex-start}.market-controls{width:100%}.candle-wrap,.candle-wrap canvas{height:220px}.chart-summary{gap:18px}.chart-summary strong{font-size:15px}}
+
+
+/* MAXI INVERSOR — redesigned priority dashboard */
+.priority-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;margin:0 0 16px}.priority-grid .card{min-height:220px;padding:20px}.opportunity-first{background:radial-gradient(ellipse at 100% 0%,rgba(91,105,218,.19),transparent 48%),linear-gradient(145deg,#171d36,#101827)!important;border-color:#343d69!important}.alert-first{background:radial-gradient(ellipse at 100% 0%,rgba(255,83,107,.12),transparent 48%),linear-gradient(145deg,#201a2b,#141722)!important;border-color:#493043!important}.priority-kicker{font-size:10px;letter-spacing:.16em;font-weight:850;color:#9bb2ff}.red-kicker{color:#ff8a9a}.priority-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.status-orb{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:#202747;color:#9bb2ff;border:1px solid #424f85;box-shadow:0 0 22px #6b80ff18}.alert-symbol{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:#3a202c;color:#ff8798;border:1px solid #713449;font-weight:900;font-size:20px}.opening-status{display:flex;flex-direction:column;gap:6px;padding:14px;margin-top:15px;border:1px solid #3a456e;background:rgba(25,34,62,.72);border-radius:13px}.opening-status strong{font-size:15px;color:#dbe4ff}.opening-status span{font-size:12px;color:#aab6d3;line-height:1.55}.opening-status.has-ideas{border-color:#247d61;background:linear-gradient(100deg,#10372d,#152b2b)}.opening-status.has-ideas strong{color:#85f5c1}.opening-alerts{margin-top:12px;max-height:200px;overflow:auto}.opening-alerts .alertitem{font-size:12px}.priority-grid .btnrow{margin-top:12px}.market-card{background:linear-gradient(145deg,#101a2b,#0b121e);border-color:#293954}.market-kicker{color:#79dfff}.market-controls .active-range{background:#1e3154;color:#a9c8ff;border-color:#5275b7}.market-card .card h2:before{background:#70a5ff}@media(max-width:760px){.priority-grid{grid-template-columns:1fr;gap:11px}.priority-grid .card{min-height:auto;padding:17px}.opening-alerts{max-height:170px}.stats{margin-top:13px}}
+
+
+/* MAXON INVERSIONES — identidad visual basada en el diseño aprobado */
+:root{--bg:#03080d;--panel:#07131c;--panel2:#0b1b25;--line:#163444;--text:#f5f8fb;--muted:#a8bfca;--green:#c6ff00;--yellow:#c6ff00;--red:#ff4566;--blue:#67d5ff}
+body{background:radial-gradient(ellipse at 92% 0%,rgba(35,255,114,.12),transparent 34%),radial-gradient(ellipse at 0% 30%,rgba(0,174,190,.09),transparent 34%),#03080d;letter-spacing:.005em}
+.wrap{max-width:1120px;padding:18px}
+.top{padding:9px 0 18px;border-bottom:1px solid #142934;margin-bottom:18px}
+.brand{gap:15px}.brandmark{width:76px;height:58px;display:grid;place-items:center;flex:none}.brandmark svg{width:100%;height:100%;filter:drop-shadow(0 0 9px #c6ff0020)}
+.brand strong{font-size:clamp(23px,4vw,36px);letter-spacing:.13em;font-weight:850;color:#f5f8fb}.brand-subtitle{color:#c6ff00;font-size:clamp(12px,2vw,18px);font-weight:800;letter-spacing:.23em;margin-top:1px}
+.sub{letter-spacing:.04em}.pill{color:#d7ff62;background:#111b10;border-color:#4b6514}
+.hero{border:1px solid #36520e;background:radial-gradient(ellipse at 100% 0%,rgba(33,232,81,.16),transparent 48%),linear-gradient(120deg,#07151a,#071019 58%,#06130e);box-shadow:0 0 25px #b7ff0010}
+.hero .sub{color:#c6ff00}.hero h1 .green{color:#c6ff00}
+button{background:linear-gradient(180deg,#101f29,#09141c);border-color:#1b3947}button:hover{border-color:#c6ff00}button.primary{background:linear-gradient(135deg,#d7ff30,#a9e600);color:#111907;border-color:#c6ff00;box-shadow:0 5px 20px #c6ff0020}
+.tabs button.active{background:linear-gradient(135deg,#d7ff30,#a9e600);color:#111907;border-color:#c6ff00;box-shadow:0 4px 15px #c6ff001c}
+.stat,.card{background:linear-gradient(155deg,rgba(7,20,29,.98),rgba(4,13,20,.98));border-color:#163444;box-shadow:0 8px 24px #0004}
+.card h2:before{background:#c6ff00}.stat:after{background:linear-gradient(180deg,#c6ff00,#c6ff0000)}
+.opportunity-first{background:radial-gradient(ellipse at 100% 0%,rgba(35,255,96,.18),transparent 48%),linear-gradient(145deg,#071d1b,#071019)!important;border-color:#baff00!important;box-shadow:0 0 24px #baff0012}
+.alert-first{background:radial-gradient(ellipse at 100% 0%,rgba(255,69,102,.13),transparent 48%),linear-gradient(145deg,#1b1019,#08111a)!important;border-color:#542538!important}
+.priority-kicker{color:#c6ff00}.red-kicker{color:#ff647b}.status-orb{background:#17240a;color:#c6ff00;border-color:#5d7a13;box-shadow:0 0 22px #c6ff0018}.alert-symbol{background:#3a1421;color:#ff647b;border-color:#713449}
+.opening-status{border-color:#24452a;background:rgba(8,29,23,.8)}.opening-status strong{color:#edffd0}.opening-status span{color:#b6c9c8}.opening-status.has-ideas{border-color:#299b5c;background:linear-gradient(100deg,#0b3020,#0b201b)}.opening-status.has-ideas strong{color:#c6ff00}
+.market-card{background:linear-gradient(145deg,#071b22,#071019);border-color:#163e4b}.market-kicker{color:#c6ff00}.market-controls .active-range{background:#1d2b0c;color:#d8ff65;border-color:#688b12}.market-card .card h2:before{background:#c6ff00}
+.alertitem.alert-target{background:linear-gradient(100deg,#0d3023,#0b201a);border-color:#22b879;box-shadow:inset 4px 0 0 #35e39a,0 0 24px #35e39a0a}.alertitem.alert-risk{background:linear-gradient(100deg,#391820,#21151b);border-color:#ff596b;box-shadow:inset 4px 0 0 #ff596b,0 0 24px #ff596b0a}
+.live-dot{background:#c6ff00;box-shadow:0 0 10px #c6ff00}
+@media(max-width:760px){.wrap{padding:12px}.brandmark{width:61px;height:47px}.brand{gap:10px}.brand strong{font-size:25px}.brand-subtitle{font-size:12px}.top{align-items:center}.pill{font-size:9px}}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+ <div class="brand"><div class="brandmark" aria-label="Logo MAXON: ojo con signo dólar"><svg viewBox="0 0 120 72" role="img" aria-label="Ojo con signo dólar"><path d="M5 36 Q60 -13 115 36 Q60 85 5 36Z" fill="none" stroke="#d9e2e8" stroke-width="6"/><path d="M18 36 Q60 2 102 36 Q60 70 18 36Z" fill="none" stroke="#c6ff00" stroke-width="3"/><circle cx="60" cy="36" r="26" fill="#071019" stroke="#d9e2e8" stroke-width="4"/><path d="M72 20 Q67 15 59 16 Q44 16 44 27 Q44 36 59 37 Q75 38 75 47 Q75 57 60 57 Q51 57 45 52 M60 9 V63" fill="none" stroke="#c6ff00" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>MAXON</strong><div class="sub brand-subtitle">INVERSIONES</div></div></div>
+ <span class="pill">PROTOTIPO · DATOS MANUALES</span>
+</header>
+<section class="hero">
+ <div class="sub">MAXON INVERSIONES <span class="live-dot"></span></div>
+ <h1>Invertí con un plan.<br><span class="green">No por impulso.</span></h1>
+ <p>Seguimiento de cartera, objetivos de precio y radar de oportunidades para acciones argentinas, CEDEARs y bonos. Este prototipo guarda tus datos en este navegador.</p>
+ <div class="row"><div class="tiny">Perfil: equilibrado · Horizontes: corto, mediano y largo</div><button class="primary" onclick="showTab('portfolio')">+ Registrar inversión</button></div>
+</section>
+
+<nav class="tabs">
+ <button class="active" data-tab="dashboard" onclick="showTab('dashboard')">Resumen</button>
+ <button data-tab="portfolio" onclick="showTab('portfolio')">Mi cartera</button>
+ <button data-tab="radar" onclick="showTab('radar')">Oportunidades</button>
+ <button data-tab="alerts" onclick="showTab('alerts')">Alertas</button>
+ <button data-tab="settings" onclick="showTab('settings')">Configuración</button>
+</nav>
+<section class="section active" id="dashboard">
+ <div class="priority-grid">
+  <div class="card opportunity-first">
+   <div class="priority-kicker">01 · RADAR DE OPORTUNIDADES</div>
+   <div class="priority-head"><div><h2 style="margin:7px 0">¿Hay oportunidades nuevas?</h2><p class="muted" style="margin:0">Estado de tu radar personal</p></div><span class="status-orb" id="opportunityOrb">●</span></div>
+   <div id="openingOpportunityStatus" class="opening-status"><strong>Sin nuevas oportunidades registradas</strong><span>El escaneo automático de mercado todavía no está conectado.</span></div>
+   <div id="openingOpportunityList"></div>
+   <div class="btnrow"><button class="primary" onclick="showTab('radar')">Revisar oportunidades</button></div>
+  </div>
+  <div class="card alert-first">
+   <div class="priority-kicker red-kicker">02 · CENTRO DE ALERTAS</div>
+   <div class="priority-head"><div><h2 style="margin:7px 0">Objetivos y riesgos</h2><p class="muted" style="margin:0">Señales registradas</p></div><span class="alert-symbol">!</span></div>
+   <div id="openingAlerts" class="opening-alerts"><div class="empty">No hay alarmas activadas.</div></div>
+   <div class="btnrow"><button onclick="showTab('alerts')">Ver todas las alertas</button></div>
+  </div>
+ </div>
+ <section class="stats">
+ <div class="stat"><div class="muted">Valor de cartera</div><div class="num" id="total">$0</div><div class="tiny">Según precios registrados</div></div>
+ <div class="stat"><div class="muted">Resultado estimado</div><div class="num" id="pnl">$0</div><div class="tiny" id="pnlpct">Sin posiciones</div></div>
+ <div class="stat"><div class="muted">Activos en cartera</div><div class="num" id="count">0</div><div class="tiny">Posiciones registradas</div></div>
+ <div class="stat"><div class="muted">Alertas activas</div><div class="num" id="alertcount">0</div><div class="tiny">Objetivos y límites de precio</div></div>
+</section>
+ <div class="card market-card" style="margin-bottom:14px">
+  <div class="row market-head"><div><div class="tiny market-kicker">VISTA DE MERCADO · DEMOSTRACIÓN</div><h2 style="margin:5px 0 3px">Gráfico de velas japonesas</h2><div class="tiny">Ejemplo visual interactivo · no representa cotizaciones reales</div></div><div class="market-controls"><button class="small active-range" onclick="drawCandles('1D',this)">1D</button><button class="small" onclick="drawCandles('1S',this)">1S</button><button class="small" onclick="drawCandles('1M',this)">1M</button><span class="tag">SIMULACIÓN</span></div></div>
+  <div class="chart-summary"><div><span class="tiny">Activo de muestra</span><strong>DEMO / SIMULADO</strong></div><div><span class="tiny">Último valor simulado</span><strong id="demoLast" class="green">$ 102,40</strong></div><div><span class="tiny">Variación simulada</span><strong id="demoChange" class="green">+2,40%</strong></div></div>
+  <div class="candle-wrap"><canvas id="candleChart" aria-label="Gráfico ilustrativo de velas japonesas"></canvas></div>
+  <div class="chart-legend"><span><i class="legend-up"></i> Alcista</span><span><i class="legend-down"></i> Bajista</span><span class="tiny">Sin conexión a BYMA ni proveedor de precios</span></div>
+ </div>
+ <div class="grid">
+  <div class="card"><div class="row"><h2>Mi cartera</h2><span class="tag">ARS</span></div><div id="dashpositions" class="empty">Todavía no registraste inversiones. Agregá una para empezar.</div></div>
+  <div class="card"><h2>Radar de oportunidades</h2><p class="muted">Las ideas de abajo son ejemplos ilustrativos, no cotizaciones ni recomendaciones actuales.</p><div id="topideas"></div></div>
+  <div class="card"><h2>Próximas alertas</h2><div id="dashalerts" class="empty">No hay alertas por ahora.</div></div>
+  <div class="card"><h2>Cómo interpretar las señales</h2><div class="alertitem"><span class="tag">Posible entrada</span><p class="tiny">Precio atractivo según los criterios que cargues; no garantiza suba.</p></div><div class="alertitem"><span class="tag">Revisar riesgo</span><p class="tiny">El precio alcanzó un límite definido por vos.</p></div><div class="alertitem"><span class="tag">Datos insuficientes</span><p class="tiny">No hay información confiable suficiente para concluir.</p></div></div>
+ </div>
+</section>
+<section class="section" id="portfolio">
+ <div class="grid">
+  <div class="card"><h2>Registrar o editar posición</h2>
+   <form id="positionform" class="formgrid">
+    <div class="field"><label for="ticker">Ticker / símbolo</label><input id="ticker" required placeholder="Ej. AL30, GGAL, AAPL"></div>
+    <div class="field"><label for="kind">Tipo de activo</label><select id="kind"><option>Acción argentina</option><option>CEDEAR</option><option>Bono</option></select></div>
+    <div class="field"><label for="qty">Cantidad nominal / títulos</label><input id="qty" type="number" min="0.0001" step="any" required placeholder="10"></div>
+    <div class="field"><label for="buy">Precio promedio de compra (ARS)</label><input id="buy" type="number" min="0.01" step="any" required placeholder="10000"></div>
+    <div class="field"><label for="price">Precio actual registrado (ARS)</label><input id="price" type="number" min="0.01" step="any" required placeholder="10500"></div>
+    <div class="field"><label for="target">Objetivo de ganancia (ARS, opcional)</label><input id="target" type="number" min="0" step="any" placeholder="12000"></div>
+    <div class="field"><label for="stop">Límite de revisión de riesgo (ARS, opcional)</label><input id="stop" type="number" min="0" step="any" placeholder="9300"></div>
+    <div class="field"><label for="notes">Notas / motivo de compra</label><input id="notes" placeholder="Ej. largo plazo, balance..."></div>
+    <div class="full btnrow"><button class="primary" type="submit">Guardar posición</button><button type="button" onclick="document.getElementById('positionform').reset()">Limpiar</button></div>
+   </form>
+  </div>
+  <div class="card"><h2>Posiciones registradas</h2><div id="positions"></div><div class="btnrow"><button onclick="exportCSV()">Exportar CSV</button><button class="warn" onclick="clearAll()">Borrar todos los datos</button></div><p class="tiny">Los datos quedan en el almacenamiento local de este navegador. No se sincronizan entre dispositivos.</p></div>
+ </div>
+</section>
+<section class="section" id="radar">
+ <div class="grid">
+  <div class="card"><h2>Evaluador multicriterio de oportunidades</h2><p class="muted">Puntúa valoración, RSI, tendencia, liquidez y fundamentos según los datos que cargues. El puntaje ordena la investigación: no es una recomendación ni una predicción. No hay cotizaciones automáticas todavía.</p>
+   <form id="ideaform" class="formgrid">
+    <div class="field"><label for="iticker">Ticker</label><input id="iticker" required placeholder="Ej. GGAL"></div>
+    <div class="field"><label for="ikind">Mercado / tipo</label><select id="ikind"><option>Acción argentina</option><option>CEDEAR</option><option>Bono</option></select></div>
+    <div class="field"><label for="iprice">Precio observado (ARS)</label><input id="iprice" type="number" min="0.01" step="any" required></div>
+    <div class="field"><label for="ifair">Valor estimado por tu análisis (ARS)</label><input id="ifair" type="number" min="0.01" step="any" required></div>
+    <div class="field"><label for="irsi">RSI (si lo conocés)</label><input id="irsi" type="number" min="0" max="100" step="any" placeholder="Ej. 38"></div>
+    <div class="field"><label for="itrend">Tendencia técnica</label><select id="itrend"><option value="unknown">No evaluada</option><option value="up">Alcista</option><option value="side">Lateral</option><option value="down">Bajista</option></select></div>
+    <div class="field"><label for="iliquidity">Liquidez observada</label><select id="iliquidity"><option value="unknown">No evaluada</option><option value="high">Alta</option><option value="medium">Media</option><option value="low">Baja</option></select></div>
+    <div class="field"><label for="ifundamentals">Fundamentos / balance</label><select id="ifundamentals"><option value="unknown">No evaluados</option><option value="good">Sólidos / mejorando</option><option value="mixed">Mixtos</option><option value="bad">Deteriorados / deuda alta</option></select></div>
+    <div class="field"><label for="istop">Precio de revisión de riesgo (ARS)</label><input id="istop" type="number" min="0" step="any" placeholder="Opcional"></div>
+    <div class="field"><label for="ihorizon">Horizonte</label><select id="ihorizon"><option>Corto plazo</option><option selected>Mediano plazo</option><option>Largo plazo</option></select></div>
+    <div class="field full"><label for="ithesis">Motivo, noticia o riesgo principal</label><input id="ithesis" placeholder="Balance, soporte, deuda, noticia, dólar..." ></div>
+    <div class="full"><button class="primary" type="submit">Evaluar oportunidad</button></div>
+   </form>
+  </div>
+  <div class="card"><h2>Oportunidades cargadas</h2><div id="ideas"></div><div class="notice" style="margin-top:12px">Una caída de precio no significa que un activo esté barato. Revisá liquidez, fundamentos, noticias y riesgos antes de decidir.</div></div>
+ </div>
+</section>
+<section class="section" id="alerts">
+ <div class="grid">
+  <div class="card"><h2>Centro de alertas</h2><p class="muted">Las reglas se revisan al guardar o actualizar un precio dentro de esta página.</p><div id="alertslist" class="empty">No hay alertas registradas.</div></div>
+  <div class="card"><h2>Probar notificación</h2><p class="muted">Podés probar el permiso de notificación local. Las notificaciones persistentes con la app cerrada y WhatsApp requieren servicios externos aún no conectados.</p><div class="btnrow"><button class="primary" onclick="enableNotifications()">Activar notificaciones del navegador</button><button onclick="testNotification()">Enviar prueba</button></div><p id="notifstatus" class="tiny">Estado: no comprobado</p><hr style="border-color:var(--line);margin:16px 0"><h3>WhatsApp</h3><p class="tiny">Pendiente: número de destino, cuenta de WhatsApp Business Platform y proveedor/API oficial. No se envían mensajes desde este prototipo.</p></div>
+ </div>
+</section>
+<section class="section" id="settings">
+ <div class="split">
+  <div class="card"><h2>Preferencias de análisis</h2><div class="field"><label>Perfil</label><input value="Equilibrado" disabled></div><div class="field" style="margin-top:10px"><label>Horizonte</label><input value="Corto, mediano y largo plazo" disabled></div><div class="field" style="margin-top:10px"><label>Frecuencia objetivo</label><input value="Diaria, días hábiles (pendiente de servidor)" disabled></div><p class="tiny">Estas preferencias definen el diseño; todavía no ejecutan un escaneo automático.</p></div>
+  <div class="card"><h2>Estado de integraciones</h2><div class="alertitem"><div class="row"><strong>Datos bursátiles</strong><span class="tag">Pendiente</span></div><div class="tiny">Elegir proveedor y revisar licencias/costos.</div></div><div class="alertitem"><div class="row"><strong>Servidor programado</strong><span class="tag">Pendiente</span></div><div class="tiny">Necesario para revisar activos cada día hábil.</div></div><div class="alertitem"><div class="row"><strong>Notificaciones push</strong><span class="tag">Prueba local</span></div><div class="tiny">Push real requiere PWA, permisos y servicio push.</div></div><div class="alertitem"><div class="row"><strong>WhatsApp oficial</strong><span class="tag">Pendiente</span></div><div class="tiny">Requiere configuración y posiblemente cargos por mensajes/proveedor.</div></div></div>
+ </div>
+</section>
+<div class="footer">Herramienta educativa de seguimiento. No ejecuta operaciones ni brinda garantías de rendimiento. Verificá precios, fecha y fuente antes de operar.</div>
+</div>
+<div id="toast" class="toast hide"></div>
+<script>
+const KEY='radarBursatilPersonal_v1';
+let state={positions:[],ideas:[],alerts:[]};
+try{const saved=localStorage.getItem(KEY);if(saved)state={...state,...JSON.parse(saved)}}catch(e){}
+const $=id=>document.getElementById(id);
+
+function drawCandles(period='1D',btn=null){
+ const canvas=$('candleChart');if(!canvas)return;const rect=canvas.getBoundingClientRect();const dpr=window.devicePixelRatio||1;canvas.width=Math.max(320,Math.floor(rect.width*dpr));canvas.height=Math.max(180,Math.floor(rect.height*dpr));const ctx=canvas.getContext('2d');ctx.scale(dpr,dpr);const w=canvas.width/dpr,h=canvas.height/dpr;ctx.clearRect(0,0,w,h);
+ let seed=period==='1D'?41:period==='1S'?72:93;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280};let price=96;const n=period==='1D'?30:period==='1S'?36:42;const candles=[];for(let i=0;i<n;i++){const open=price;price=Math.max(78,Math.min(119,price+(rnd()-.43)*(period==='1D'?2.8:4.2)));const close=price;const high=Math.max(open,close)+rnd()*2.1,low=Math.min(open,close)-rnd()*2.1;candles.push({open,close,high,low})}
+ const min=Math.min(...candles.map(c=>c.low))-1,max=Math.max(...candles.map(c=>c.high))+1;const pad={l:12,r:43,t:14,b:22};const cw=w-pad.l-pad.r,ch=h-pad.t-pad.b;const y=v=>pad.t+(max-v)/(max-min)*ch;
+ ctx.font='10px system-ui';ctx.strokeStyle='#1b303b';ctx.lineWidth=1;for(let i=0;i<5;i++){const yy=pad.t+i*ch/4;ctx.beginPath();ctx.moveTo(pad.l,yy);ctx.lineTo(w-pad.r,yy);ctx.stroke();ctx.fillStyle='#718894';ctx.fillText((max-(max-min)*i/4).toFixed(1),w-pad.r+6,yy+3)}
+ const step=cw/n,body=Math.max(3,step*.55);candles.forEach((c,i)=>{const x=pad.l+i*step+step/2;const up=c.close>=c.open;const color=up?'#35e39a':'#ff596b';ctx.strokeStyle=color;ctx.lineWidth=1.3;ctx.beginPath();ctx.moveTo(x,y(c.high));ctx.lineTo(x,y(c.low));ctx.stroke();ctx.fillStyle=color;const top=y(Math.max(c.open,c.close)),bh=Math.max(2,Math.abs(y(c.open)-y(c.close)));ctx.fillRect(x-body/2,top,body,bh)});
+ const last=candles[candles.length-1].close;const change=(last-96)/96*100;$('demoLast').textContent='$ '+last.toFixed(2).replace('.',',');$('demoChange').textContent=(change>=0?'+':'')+change.toFixed(2).replace('.',',')+'%';$('demoChange').className=change>=0?'green':'red';document.querySelectorAll('.market-controls button').forEach(b=>b.classList.remove('active-range'));if(btn)btn.classList.add('active-range');
+}
+window.addEventListener('resize',()=>drawCandles());
+
+function save(){localStorage.setItem(KEY,JSON.stringify(state));render()}
+function money(n){return new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS',maximumFractionDigits:2}).format(Number(n)||0)}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function toast(s){$('toast').textContent=s;$('toast').classList.remove('hide');setTimeout(()=>$('toast').classList.add('hide'),2600)}
+function showTab(id){document.querySelectorAll('.section').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'})}
+function evaluatePosition(p){let messages=[];if(p.target>0&&p.price>=p.target)messages.push({key:p.id+'-target',title:p.ticker+' alcanzó su objetivo',body:'Precio registrado '+money(p.price)+' · Objetivo '+money(p.target),type:'Objetivo'});if(p.stop>0&&p.price<=p.stop)messages.push({key:p.id+'-risk',title:'Revisar riesgo: '+p.ticker,body:'Precio registrado '+money(p.price)+' · Límite '+money(p.stop),type:'Riesgo'});for(const m of messages){if(!state.alerts.some(a=>a.key===m.key&&a.price===p.price)){state.alerts.unshift({...m,price:p.price,date:new Date().toLocaleString('es-AR'),read:false});browserNotify(m.title,m.body)}}}
+function browserNotify(title,body){if('Notification'in window&&Notification.permission==='granted'){try{new Notification(title,{body})}catch(e){}}}
+$('positionform').addEventListener('submit',e=>{e.preventDefault();const p={id:Date.now(),ticker:$('ticker').value.trim().toUpperCase(),kind:$('kind').value,qty:+$('qty').value,buy:+$('buy').value,price:+$('price').value,target:+$('target').value||0,stop:+$('stop').value||0,notes:$('notes').value.trim(),updated:new Date().toISOString()};state.positions.unshift(p);evaluatePosition(p);save();e.target.reset();toast('Posición guardada');showTab('portfolio')});
+function analyzeIdea(x){let score=0,known=0,checks=[];const add=(label,points,max,detail)=>{score+=points;known+=max;checks.push({label,points,max,detail})};
+ if(x.discount>=20)add('Valoración',20,20,'Descuento estimado ≥20%');else if(x.discount>=10)add('Valoración',14,20,'Descuento estimado 10–19,9%');else if(x.discount>=0)add('Valoración',7,20,'Descuento estimado menor al 10%');else add('Valoración',0,20,'Precio sobre el valor estimado');
+ if(x.rsi!==null){if(x.rsi>=30&&x.rsi<=45)add('RSI',15,15,'Zona de posible recuperación; confirmar tendencia');else if(x.rsi<30)add('RSI',10,15,'Posible sobreventa; puede seguir cayendo');else if(x.rsi<=60)add('RSI',8,15,'RSI neutral');else add('RSI',2,15,'RSI alto; vigilar impulso extendido')}else checks.push({label:'RSI',points:0,max:15,detail:'Sin dato: no suma al puntaje'});
+ if(x.trend==='up')add('Tendencia',15,15,'Tendencia alcista seleccionada');else if(x.trend==='side')add('Tendencia',8,15,'Tendencia lateral');else if(x.trend==='down')add('Tendencia',0,15,'Tendencia bajista: riesgo elevado');else checks.push({label:'Tendencia',points:0,max:15,detail:'No evaluada'});
+ if(x.liquidity==='high')add('Liquidez',15,15,'Liquidez alta seleccionada');else if(x.liquidity==='medium')add('Liquidez',9,15,'Liquidez media');else if(x.liquidity==='low')add('Liquidez',0,15,'Liquidez baja: cuidado con el spread');else checks.push({label:'Liquidez',points:0,max:15,detail:'No evaluada'});
+ if(x.fundamentals==='good')add('Fundamentos',20,20,'Fundamentos sólidos/mejorando');else if(x.fundamentals==='mixed')add('Fundamentos',10,20,'Fundamentos mixtos');else if(x.fundamentals==='bad')add('Fundamentos',0,20,'Fundamentos deteriorados');else checks.push({label:'Fundamentos',points:0,max:20,detail:'No evaluados'});
+ let pct=known?Math.round(score/known*100):0;let verdict=known<50?'Datos insuficientes: completá más criterios antes de evaluar':pct>=75?'Prioridad alta para investigar; no es señal automática de compra':pct>=55?'Interesante para seguimiento; confirmar datos y riesgos':'Prioridad baja o riesgo elevado; revisar antes de considerar';if(x.stop>0&&x.stop>=x.price)verdict='Revisar límite de riesgo: debe estar por debajo del precio observado. '+verdict;return {score,pct,known,checks,verdict}}
+$('ideaform').addEventListener('submit',e=>{e.preventDefault();let price=+$('iprice').value,fair=+$('ifair').value,rsi=$('irsi').value===''?null:+$('irsi').value;let discount=(fair-price)/fair*100;const idea={id:Date.now(),ticker:$('iticker').value.trim().toUpperCase(),kind:$('ikind').value,price,fair,rsi,discount,trend:$('itrend').value,liquidity:$('iliquidity').value,fundamentals:$('ifundamentals').value,stop:+$('istop').value||0,horizon:$('ihorizon').value,thesis:$('ithesis').value.trim(),date:new Date().toLocaleString('es-AR')};Object.assign(idea,analyzeIdea(idea));state.ideas.unshift(idea);save();e.target.reset();toast('Análisis multicriterio guardado');showTab('radar')});
+function updatePrice(id){let p=state.positions.find(x=>x.id===id);if(!p)return;let v=prompt('Ingresá el nuevo precio observado en ARS para '+p.ticker,p.price);if(v===null)return;let n=Number(v);if(!Number.isFinite(n)||n<=0){toast('Precio inválido');return}p.price=n;p.updated=new Date().toISOString();evaluatePosition(p);save();toast('Precio actualizado')}
+function removePosition(id){if(confirm('¿Eliminar esta posición?')){state.positions=state.positions.filter(p=>p.id!==id);save()}}
+function removeIdea(id){state.ideas=state.ideas.filter(i=>i.id!==id);save()}
+function renderPositions(target){if(!state.positions.length){$(target).innerHTML='<div class="empty">Todavía no hay posiciones guardadas.</div>';return}$(target).innerHTML='<div class="tablewrap"><table><thead><tr><th>Activo</th><th>Cantidad</th><th>Compra</th><th>Precio</th><th>Resultado</th><th>Acciones</th></tr></thead><tbody>'+state.positions.map(p=>{let pnl=(p.price-p.buy)*p.qty;return `<tr><td><strong>${esc(p.ticker)}</strong><br><span class="tiny">${esc(p.kind)}</span></td><td>${p.qty}</td><td>${money(p.buy)}</td><td>${money(p.price)}</td><td class="${pnl>=0?'green':'red'}">${money(pnl)}<br><span class="tiny">${((p.price-p.buy)/p.buy*100).toFixed(2)}%</span></td><td><button class="small" onclick="updatePrice(${p.id})">Actualizar</button> <button class="small warn" onclick="removePosition(${p.id})">Borrar</button></td></tr>`}).join('')+'</tbody></table></div>'}
+function renderIdeas(target){if(!state.ideas.length){$(target).innerHTML='<div class="empty">Todavía no cargaste oportunidades.</div>';return}$(target).innerHTML=state.ideas.map(i=>{const a=Number.isFinite(i.pct)?i:analyzeIdea(i);const score=Number.isFinite(i.pct)?i.pct:a.pct;const verdict=i.verdict||a.verdict;return `<div class="alertitem"><div class="row"><strong>${esc(i.ticker)} <span class="tag">${esc(i.kind)}</span></strong><span class="tag">${score}/100</span><button class="small warn" onclick="removeIdea(${i.id})">Borrar</button></div><div class="tiny">Precio observado ${money(i.price)} · Valor estimado ${money(i.fair)} · Diferencia estimada ${Number(i.discount||0).toFixed(1)}%</div><p>${esc(verdict)}</p><div class="tiny">Horizonte: ${esc(i.horizon||'No especificado')} · RSI: ${i.rsi===null?'sin dato':i.rsi} · Tendencia: ${esc(({up:'alcista',side:'lateral',down:'bajista',unknown:'no evaluada'})[i.trend]||'no evaluada')} · Liquidez: ${esc(({high:'alta',medium:'media',low:'baja',unknown:'no evaluada'})[i.liquidity]||'no evaluada')}</div>${i.stop?`<div class="tiny">Precio de revisión de riesgo: ${money(i.stop)}</div>`:''}<div class="tiny">${esc(i.thesis)} · ${esc(i.date)}</div></div>`}).join('')}
+function renderAlerts(target){if(!state.alerts.length){$(target).innerHTML='<div class="empty">No hay alertas registradas. Configurá objetivos o límites de riesgo en una posición.</div>';return}$(target).innerHTML=state.alerts.map(a=>`<div class="alertitem ${a.type==='Objetivo'?'alert-target':a.type==='Riesgo'?'alert-risk':''}"><div class="row"><strong>${esc(a.title)}</strong><span class="tag">${esc(a.type)}</span></div><div>${esc(a.body)}</div><div class="tiny">${esc(a.date)}</div></div>`).join('')}
+function render(){let value=0,cost=0;state.positions.forEach(p=>{value+=p.price*p.qty;cost+=p.buy*p.qty});let pnl=value-cost;$('total').textContent=money(value);$('pnl').textContent=money(pnl);$('pnl').className='num '+(pnl>=0?'green':'red');$('pnlpct').textContent=cost?((pnl/cost)*100).toFixed(2)+'% sobre costo registrado':'Sin posiciones';$('count').textContent=state.positions.length;$('alertcount').textContent=state.positions.filter(p=>p.target>0||p.stop>0).length;renderPositions('positions');renderPositions('dashpositions');renderIdeas('ideas');renderAlerts('alertslist');renderAlerts('dashalerts');renderAlerts('openingAlerts');const op=$('openingOpportunityStatus');if(state.ideas.length){$('opportunityOrb').style.color='#78f2b6';$('opportunityOrb').style.background='#15382f';op.className='opening-status has-ideas';op.innerHTML=`<strong>${state.ideas.length} oportunidad${state.ideas.length===1?'':'es'} registrada${state.ideas.length===1?'':'s'}</strong><span>Última evaluación: ${esc(state.ideas[0].ticker)} · ${esc(state.ideas[0].verdict)}. Datos ingresados manualmente.</span>`;$('openingOpportunityList').innerHTML=state.ideas.slice(0,2).map(i=>`<div class="alertitem"><div class="row"><strong>${esc(i.ticker)}</strong><span class="tag">${esc(i.kind)}</span></div><div class="tiny">${esc(i.verdict)}</div></div>`).join('')}else{$('opportunityOrb').style.color='#9bb2ff';$('opportunityOrb').style.background='#202747';op.className='opening-status';op.innerHTML='<strong>Sin nuevas oportunidades registradas</strong><span>No hay nuevas ideas cargadas. El escaneo automático de acciones, CEDEARs y bonos aún no está conectado; no se está consultando el mercado en tiempo real.</span>';$('openingOpportunityList').innerHTML=''}$('topideas').innerHTML=state.ideas.length?state.ideas.slice(0,3).map(i=>`<div class="alertitem"><strong>${esc(i.ticker)}</strong><div class="tiny">${esc(i.verdict)}</div></div>`).join(''):'<div class="empty">Cargá un activo en la pestaña Oportunidades para probar el evaluador.</div>'}
+async function enableNotifications(){if(!('Notification'in window)){$('notifstatus').textContent='Este navegador no admite notificaciones web.';return}try{let p=await Notification.requestPermission();$('notifstatus').textContent='Estado: '+p;toast('Permiso de notificación: '+p)}catch(e){$('notifstatus').textContent='No se pudo solicitar el permiso.'}}
+function testNotification(){if(!('Notification'in window)){toast('Navegador sin soporte de notificaciones');return}if(Notification.permission==='granted'){browserNotify('Prueba de MAXON INVERSIONES','Las notificaciones del navegador están habilitadas.');toast('Notificación de prueba solicitada')}else{toast('Primero activá el permiso de notificaciones')}}
+function exportCSV(){let rows=[['Ticker','Tipo','Cantidad','Compra_ARS','Precio_ARS','Objetivo_ARS','Limite_riesgo_ARS','Notas'],...state.positions.map(p=>[p.ticker,p.kind,p.qty,p.buy,p.price,p.target,p.stop,p.notes])];let csv=rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(';')).join('\r\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8;'}));a.download='cartera_maxi_inversor.csv';a.click();URL.revokeObjectURL(a.href)}
+function clearAll(){if(confirm('Esto borrará las posiciones, oportunidades y alertas guardadas en este navegador. ¿Continuar?')){state={positions:[],ideas:[],alerts:[]};save();toast('Datos eliminados')}}
+render();drawCandles();
+</script>
+</body></html>
